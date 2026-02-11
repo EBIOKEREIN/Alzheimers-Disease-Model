@@ -1,4 +1,4 @@
-# Alzheimer's Disease Diagnosis Prediction
+Alzheimer's Disease Diagnosis Prediction
 
 A machine learning project that predicts Alzheimer's disease diagnosis using patient demographic, lifestyle, medical, clinical, cognitive, and symptom data. The project compares **Logistic Regression** (via statsmodels GLM) with a **Bayesian-optimized XGBoost** classifier, achieving up to **94.9% accuracy** on the test set.
 
@@ -6,7 +6,7 @@ A machine learning project that predicts Alzheimer's disease diagnosis using pat
 
 ---
 
-## Table of Contents
+Table of Contents
 
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
@@ -20,7 +20,7 @@ A machine learning project that predicts Alzheimer's disease diagnosis using pat
 
 ---
 
-## Project Overview
+Project Overview
 
 Alzheimer's disease is a progressive neurodegenerative disorder, and early detection is critical for intervention and care planning. This project explores whether a combination of clinical assessments, demographic factors, lifestyle indicators, and symptom profiles can reliably predict an Alzheimer's diagnosis using machine learning.
 
@@ -32,7 +32,7 @@ The analysis follows three main stages:
 
 ---
 
-## Dataset
+Dataset
 
 The dataset (`alzheimers_disease_data.csv`) contains **2,149 patient records** with **35 features** spanning six categories:
 
@@ -51,14 +51,14 @@ The dataset has **no missing values** and the target distribution is approximate
 
 ---
 
-## Methodology
+Methodology
 
-### Exploratory Data Analysis
+Exploratory Data Analysis
 
 - Distribution plots for all feature groups (demographics, lifestyle, target).
 - Correlation analysis against the `Diagnosis` target.
 
-### Logistic Regression (statsmodels GLM)
+Logistic Regression (statsmodels GLM)
 
 Multiple GLM models were fit to isolate the predictive power of each feature group:
 
@@ -70,7 +70,7 @@ Multiple GLM models were fit to isolate the predictive power of each feature gro
 - **Symptoms model** — Confusion, disorientation, personality changes, task difficulty, forgetfulness.
 - **Interaction experiments** — Age × EducationLevel, SleepQuality × Age, MMSE × MemoryComplaints.
 
-### Scikit-learn Logistic Regression
+Scikit-learn Logistic Regression
 
 A standard `LogisticRegression` model with `StandardScaler` preprocessing, evaluated with precision-recall curves and ROC-AUC analysis.
 
@@ -81,7 +81,7 @@ A standard `LogisticRegression` model with `StandardScaler` preprocessing, evalu
 
 ---
 
-## Results
+Results
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |---|---|---|---|---|
@@ -94,20 +94,20 @@ The XGBoost model significantly outperformed all logistic regression variants. F
 
 ---
 
-## Installation & Setup
+Installation & Setup
 
-### Prerequisites
+Prerequisites
 
 - Python 3.10+
 - Jupyter Notebook or JupyterLab
 
-### Install Dependencies
+Install Dependencies
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn statsmodels xgboost scikit-optimize bayesian-optimization ISLP
 ```
 
-### Run the Notebook
+Run the Notebook
 
 ```bash
 jupyter notebook MGSC_661_Code.ipynb
@@ -117,7 +117,7 @@ Make sure the dataset file `alzheimers_disease_data.csv` is in the same director
 
 ---
 
-## Usage
+Usage
 
 1. Clone the repository:
    ```bash
@@ -130,7 +130,7 @@ Make sure the dataset file `alzheimers_disease_data.csv` is in the same director
 
 ---
 
-## Repository Structure
+Repository Structure
 
 ```
 ├── MGSC_661_Code.ipynb        # Main analysis notebook
@@ -140,7 +140,7 @@ Make sure the dataset file `alzheimers_disease_data.csv` is in the same director
 
 ---
 
-## Key Libraries
+Key Libraries
 
 - **pandas / numpy** — Data manipulation
 - **matplotlib / seaborn** — Visualization
@@ -151,6 +151,6 @@ Make sure the dataset file `alzheimers_disease_data.csv` is in the same director
 
 ---
 
-## License
+License
 
 This project is for academic purposes as part of the MGSC 661 course. Please refer to the dataset's original license for data usage terms.
